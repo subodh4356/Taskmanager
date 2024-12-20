@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div id="particles-js"></div>
+
+    
+    <div class="container">
+        <header class="header">
+            <h1>Task Manager</h1>
+        </header>
+
+        <main class="main-content">
+            <form id="task-form" class="task-form">
+                <input type="text" id="task-input" placeholder="Enter your task" required />
+                <button type="submit" class="btn-add">Add Task</button>
+            </form>
+
+           
+             <div class="task-list">
+                <h2>Tasks</h2>
+                <ul id="task-list"></ul>
+             </div>
+            
+        </main>
+
+        <footer>
+            <div class="footer-container">
+              <p>© 2024 Subodh Bajare</p>
+              <div class="social-icons">
+                <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </footer>
+          
+          
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 150, density: { enable: true, value_area: 800 } },
+                color: { value: "#007bff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: true, speed: 2, size_min: 0.3, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: "#007bff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 1 } },
+                    bubble: { distance: 200, size: 4, duration: 2, opacity: 0.8 },
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <!-- Script File -->
+    <script type="module" src="script.js"></script>
+
+   
+</body>
+</html>
